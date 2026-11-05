@@ -1,0 +1,24 @@
+{
+  "name": "LearnPlay (.NET 10)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "10.0"
+    }
+  },
+  "forwardPorts": [5072],
+  "portsAttributes": {
+    "5072": {
+      "label": "LearnPlay web app",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "dotnet restore LearnPlay.sln",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit"
+      ]
+    }
+  }
+}
